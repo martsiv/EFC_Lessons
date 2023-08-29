@@ -1,0 +1,38 @@
+﻿<Window x:Class="WPFClient.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFClient"
+        xmlns:data="clr-namespace:Shop_data_access.Repositories;assembly=Shop_data_access"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+
+    <StackPanel>
+        <TextBlock HorizontalAlignment="Center" FontSize="20">
+            Shop Manager
+        </TextBlock>
+        <ComboBox  x:Name="ComboBoxShops" >
+            
+        </ComboBox>
+            <TabControl>
+            <TabItem Header="Shop review">
+                <Grid x:Name="GridFullInfo">
+                    
+                </Grid>
+            </TabItem>
+            <TabItem Header="Employees">
+                <ListBox x:Name="ListBoxEmployees">Employee 1</ListBox>
+            </TabItem>
+            <TabItem Header="Products">
+                <StackPanel>
+                    <UniformGrid>
+                        <ComboBox x:Name="ComboBoxProducts"></ComboBox>
+                        <Button x:Name="ButtonShowFullInfo">Show full info</Button>
+                    </UniformGrid>
+                    <ListBox x:Name="ListBoxProducts">Product 1</ListBox>
+                </StackPanel>
+            </TabItem>
+        </TabControl>
+    </StackPanel>
+</Window>
